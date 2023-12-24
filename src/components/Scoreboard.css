@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.scoreboard {
+    border: var(--header-outline) 2px solid;
+    display: flex;
+    justify-content: space-between;    
+    width: 65%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    user-select: none;
+}
+
+.game-title h3 {
+    color: white;
+    margin: 5px;
+    padding: 0;
+    line-height:30px;
+    font-size: 3em;
+    user-select: none;
+   /* background-color: red; */
+
+}
+
+.score {
+    width: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 0;
+}
+
+.score h5 {
+    color: var(--score-text);
+    margin: 0;
+}
+
+
+.score h2 {
+    color: var(--dark-text);
+    font-size: 3em;
+    margin: 0;
+}

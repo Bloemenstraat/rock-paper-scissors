@@ -1,0 +1,80 @@
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.selection-table {
+    background-image: url('../assets/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 40px; 
+}
+
+.selection-table .choice-scaffold:last-child {
+    grid-column: span 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.result-table {
+    width: 65%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-table h4 {
+    color: white;
+    font-size: 1.6em;
+}
+
+.your-pick, .house-pick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.empty-pick {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(20, 21, 57, 0.3);
+    border-radius: 50%;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.result h3 {
+    color: white;
+    font-size: 2em;
+}
+
+.result button {
+    padding: 12px 35px;
+    background-color: white;
+    color: var(--dark-text);
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.result button:hover {
+    color: var(--rock);
+}
