@@ -5,9 +5,10 @@ import ScissorsIcon from '../assets/icon-scissors.svg'
 
 export default function Game ({ onClick, type, size, winner }) {
 
-    console.log(winner)
-
     let ChoiceIcon;
+
+    if (document.documentElement.clientWidth <= 375)
+        size = 100;
 
     switch (type) {
         case 'rock':
@@ -24,7 +25,7 @@ export default function Game ({ onClick, type, size, winner }) {
     return (
         <div className="choice-scaffold">
             <div className="choice" 
-                style={{ width: `${size}px`, height: `${size}px`, backgroundColor: `var(--${type})` }}
+                style={{ width: `${size}px`, height: `${size}px`, backgroundColor: `var(--${type})`, boxShadow: `inset 0px -8px var(--${type}-gradient)` }}
                 onClick={ onClick ? () => onClick(type) : () => {} }>
                 <div className="inner">
                     <img src={ChoiceIcon} />

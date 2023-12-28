@@ -11,6 +11,10 @@ export default function Game () {
     const [ houseSelected, setHouseSelected ] = useState('');
     const [ win, setWin ] = useState(undefined);
     const { score, setScore } = useContext(ScoreContext);
+    let mobile = false;
+
+    if (document.documentElement.clientWidth <= 375)
+        mobile = true;
 
     useEffect(() => {
         if (win == true)
@@ -85,6 +89,8 @@ export default function Game () {
                     <h3>{ win == 'tie' ? 'TIE' : ( win ? 'YOU WIN' : 'YOU LOSE') }</h3>
                     <button onClick={restart} >PLAY AGAIN</button>
                 </div> }
+
+                { (win == undefined && mobile) && <div></div> }
 
                 <div className="house-pick">
                     <h4>THE HOUSE PICKED</h4>

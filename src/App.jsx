@@ -22,11 +22,12 @@ function App() {
 
             {displayModal && <div className="modal-background">
                 <div className="modal">
-                    <div className="modal-header">
-                        <h5>RULES</h5>
-                        <img src={IconClose} onClick={() => setDisplayModal(!displayModal)} />
-                    </div>
-                    <img src={RulesImage} />
+                    
+                    <h5>RULES</h5>
+                
+                    <img className='rulebook' src={RulesImage} />
+
+                    <img className="x" src={IconClose} onClick={() => setDisplayModal(!displayModal)} />
                 </div>
 
             </div>}

@@ -47,3 +47,24 @@ header {
     font-size: 3em;
     margin: 0;
 }
+
+@media screen and (max-width: 375px) {
+    .scoreboard { 
+        width: 85%;
+    }
+
+    .game-title h3 {
+        font-size: 1.5em;
+        line-height:15px;
+    
+    }
+
+    .score {
+        width: 35%;
+    }
+
+    .score h2 {
+        font-size: 1.5em;
+    }
+  
+}

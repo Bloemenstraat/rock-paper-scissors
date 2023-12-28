@@ -78,3 +78,27 @@
 .result button:hover {
     color: var(--rock);
 }
+
+
+@media screen and (max-width: 375px) {
+    .empty-pick {
+        width: 100px;
+        height: 100px;
+    }
+
+    .result-table h4 {
+        font-size: 0.9em;
+    }
+
+    .result-table {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result {
+        grid-column: span 2; 
+    }
+    
+  }

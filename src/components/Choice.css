@@ -9,6 +9,7 @@
     width: 80%;
     height: 80%;
     /*transform: translate(10%, 10%);*/
+    box-shadow: inset 2px 8px #B9BED3;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -35,6 +36,7 @@
     top: -15%; 
     left: -15%;
     z-index: -99;
+    animation: 0.5s ease-out 0s 1 glaring;
 }
 
 .glare2 {
@@ -44,6 +46,7 @@
     top: -30%; 
     left: -30%;
     z-index: -99;
+    animation: 0.75s ease-out 0s 1 glaring;
 }
 
 .glare3 {
@@ -53,8 +56,26 @@
     top: -45%; 
     left: -45%;
     z-index: -99;
+    animation: 1s ease-out 0s 1 glaring;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+@keyframes glaring {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }    
+}
+
+@media screen and (max-width: 375px) {
+    .rules-button {
+      bottom: 20px;
+      right: 50%;
+      transform: translateX(50%);
+    }
 }
